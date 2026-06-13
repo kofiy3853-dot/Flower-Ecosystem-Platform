@@ -1,0 +1,166 @@
+:root {
+ --emerald: #2f6b34;
+ --forest: #1f4d2f;
+ --sage: #9fbf9a;
+ --mint: #e6fff0;
+ --beige: #f6efe6;
+ --white: #ffffff;
+ --glass-bg: rgba(255, 255, 255, 0.6);
+ --glass-border: rgba(255, 255, 255, 0.45);
+ --shadow: 0 6px 18px rgba(31, 77, 47, 0.06);
+ --radius: 14px;
+ font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+ color-scheme: light;
+ --primary: #0f8b5f;
+ --secondary: #e7fff4;
+ --dark: #1d2939;
+ --glass: rgba(255, 255, 255, 0.25);
+}
+
+
+* {
+ box-sizing: border-box
+}
+
+html,
+body {
+ height: 100%
+}
+
+body {
+ margin: 0;
+ background: radial-gradient(1200px 600px at 10% 10%, #f7fff9 0%, #f1fbf4 10%, #ffffff 40%);
+ color: var(--forest);
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+
+/* RESET */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+
+a {
+ text-decoration: none;
+}
+
+button {
+ border: none;
+ cursor: pointer;
+ font-family: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+ position: fixed;
+ top: 0;
+ left: 50%;
+ transform: translateX(-50%);
+
+ width: 92%;
+ width: 100%;
+
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+
+ padding: 18px 65px;
+
+ background: rgba(255, 255, 255, 0.35);
+ backdrop-filter: blur(18px);
+ -webkit-backdrop-filter: blur(18px);
+
+ border: 1px solid rgba(255, 255, 255, 0.4);
+
+ box-shadow:
+  0 10px 30px rgba(0, 0, 0, 0.08);
+
+ z-index: 999;
+}
+
+/* LOGO */
+
+.logo {
+ font-size: 1.4rem;
+ font-weight: 700;
+ color: #0f8b5f;
+ letter-spacing: 0.5px;
+}
+
+/* CENTER LINKS */
+
+.nav-links {
+ display: flex;
+ align-items: center;
+ gap: 2rem;
+}
+
+.nav-links a {
+ color: #344054;
+ font-size: 1rem;
+ font-weight: 500;
+ position: relative;
+ transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+ color: #0f8b5f;
+}
+
+.nav-links .active {
+ color: #0f8b5f;
+}
+
+/* Animated underline */
+
+.nav-links a::after {
+ content: "";
+
+ position: absolute;
+ left: 0;
+ bottom: -8px;
+
+ width: 0%;
+ height: 2px;
+
+ background: #0f8b5f;
+
+ transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+ width: 100%;
+}
+
+/* RIGHT BUTTONS */
+
+.nav-actions {
+ display: flex;
+ gap: 12px;
+}
+
+/* LOGIN */
+
+.login-btn {
+ background: transparent;
+
+ border: 1px solid rgba(15, 139, 95, 0.25);
+
+ padding: 12px 22px;
+
+ border-radius: 12px;
+
+ color: #0f8b5f;
+
+ font-weight: 600;
+
+ transition: 0.3s;
+}
+
+.login-btn:hover {
+ background: rgba(15, 139, 95, 0.08);
+}
